@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100svh;
+  gap: 40px;
+}
+
+.uploader {
+  --overlay-background-color: var(--gray-alpha-100);
+  --progress-bar-fill-color: oklch(72.3% 0.219 149.579);
+  width: 90%;
+  max-width: 480px;
+  flex-shrink: 1;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px var(--gray-alpha-100), 0 2px 4px -2px var(--gray-alpha-100);
+  overflow: hidden;
+  /* Learn More: https://www.mux.com/docs/guides/uploader-web-customize-look-and-feel#style-with-css */
+}
+
+.uploader::part(drop) {
+  border: 0;
+}
+
+.uploader::part(file-select-button) {
+  background: var(--foreground);
+  color: var(--background);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .uploader::part(file-select-button):hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+}
+
+.link {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--foreground);
+  color: var(--background);
+  transition: background 0.2s, color 0.2s;
+  border-radius: 128px;
+  border: 1px solid transparent;
+  padding: 0 20px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    background: var(--button-primary-hover);
+  }
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Video from "next-video";
 import styles from "./page.module.css";
 import getStarted from "/videos/get-started.mp4";
@@ -12,8 +13,8 @@ export default function Home() {
             className={styles.icon}
             src="/nextjs.svg"
             alt="Next.js Logo"
-            width={80}
-            height={80}
+            width={72}
+            height={72}
             priority
           />
           <Image
@@ -28,8 +29,8 @@ export default function Home() {
             className={styles.icon}
             src="/next-video.svg"
             alt="Next Video Logo"
-            width={80}
-            height={80}
+            width={72}
+            height={72}
             priority
           />
         </div>
@@ -52,6 +53,9 @@ export default function Home() {
             />
             Deploy now
           </a>
+          <Link href="/upload" className={styles.secondary}>
+            Upload Video
+          </Link>
           <a
             href="https://next-video.dev/docs"
             target="_blank"
@@ -62,6 +66,8 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+      <div className={styles.spacer} />
 
       <footer className={styles.footer}>
         <a href="https://next-video-demo.vercel.app" target="_blank" rel="noopener noreferrer">
