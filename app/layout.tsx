@@ -45,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} ${jetBrainsMono.variable}`}>{children}</body>
+    <html className={`${dmSans.variable} ${jetBrainsMono.variable}`} lang="en">
+      <body>{children}</body>
     </html>
   );
 }
