@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 600px;
+  aspect-ratio: 16 / 9;
+  background-color: black;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.player {
+  width: 100%;
+  height: 100%;
+  /* Learn More: https://www.mux.com/docs/guides/player-customize-look-and-feel */
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: oklch(63.7% 0.237 25.331);
+}

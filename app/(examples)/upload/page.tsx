@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createUpload } from "./server";
 import { Uploader } from "./uploader";
 import styles from "./page.module.css";
@@ -10,6 +11,9 @@ export default async function Page() {
   return (
     <main className={styles.main}>
       <Uploader className={styles.uploader} upload={upload} />
+      <Link className={styles.link} href="/">
+        Go Home
+      </Link>
     </main>
   );
 }

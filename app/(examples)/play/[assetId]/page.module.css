@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100svh;
+  padding: 56px;
+  gap: 40px;
+}
+
+.link {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--foreground);
+  color: var(--background);
+  transition: background 0.2s, color 0.2s;
+  border-radius: 128px;
+  border: 1px solid transparent;
+  padding: 0 20px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    background: var(--button-primary-hover);
+  }
+}
+
+@media (max-width: 680px) {
+  .main {
+    padding: 20px;
+  }
+}
